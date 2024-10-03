@@ -8,9 +8,9 @@ body, html {
 header.sticky-header {
     background-color: #800020; /* Burgundy color */
     color: white;
-    padding: 10px 0;
+    padding: 10px 0; /* Keep this padding for header size */
     text-align: center;
-    position: fixed; /* Ensure the header stays fixed on scroll */
+    position: fixed;
     top: 0;
     z-index: 1000;
     width: 100%;
@@ -22,7 +22,9 @@ header.sticky-header {
 header img#logo {
     max-width: 300px;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the logo */
+    padding: 0; /* Remove padding to reduce space */
+    display: block; /* Ensure the logo stays centered */
 }
 
 nav {
@@ -97,6 +99,33 @@ nav ul {
 header.sticky-header + nav {
     margin-top: 0;
 }
+
+/* Adjust the spacing between squigly images and logo */
+.squigly {
+    display: flex; /* Use flex to align items */
+    justify-content: center; /* Horizontally center the image */
+    margin: 0 auto; /* Center the squigly image container */
+    padding: 0; /* Remove any padding */
+}
+
+.squigly img {
+    display: block; /* Ensure the squigly images are block-level */
+    margin: 0 auto; /* Center the image */
+    padding: 0; /* Remove extra padding */
+    width: auto; /* Ensure the image keeps its natural width */
+    height: auto; /* Ensure the image keeps its natural height */
+    max-width: 100%; /* Ensure the image scales properly on mobile */
+}
+
+/* Additional adjustments to reduce space between squigly images and logo */
+header .squigly:first-of-type {
+    margin-bottom: -10px; /* Reduce space between top squigly and logo */
+}
+
+header .squigly:last-of-type {
+    margin-top: -10px; /* Reduce space between bottom squigly and logo */
+}
+
 
 /* Add padding below the nav list to prevent the slider from getting cut off */
 main {
@@ -320,11 +349,6 @@ footer {
     text-align: center;
     padding: 5px 10px; /* Adjust padding as needed */
     margin: 0 auto; /* Center the box horizontally */
-}
-
-.squigly {
-	position:center;
-
 }
 
 #about-us-images {
