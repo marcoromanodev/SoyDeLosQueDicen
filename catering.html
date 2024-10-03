@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="sticky-header"> <!-- Added sticky header class -->
+        <div class="squigly">
+            <img src="squigly.png" alt="Arte" />
+        </div>
+        <a href="index.html"><img src="querrepario_logo.png" alt="Querrepario Mexican Kitchen Logo" id="logo"></a>
+        <div class="squigly">
+            <img src="squigly.png" alt="Arte" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://qrcodes.pro/8ZyNFQ#Mexican%20Kitchen" target="_blank">Menu</a></li>
+                <li id="order-now"><a href="javascript:void(0);">Order Now &#9662;</a>
+                    <div id="order-options" class="order-dropdown">
+                        <a href="https://www.ubereats.com/store/querrepario-mexican-kitchen/IfLYrsV2XwWSy6fwOHfbiQ" target="_blank">Uber Eats</a>
+                        <a href="https://postmates.com/store/querrepario-mexican-kitchen/IfLYrsV2XwWSy6fwOHfbiQ" target="_blank">Postmates</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+     <!-- Mobile Contact Bar -->
+    <div id="mobile-bar" class="mobile-contact-bar">
+        <a href="tel:+17739401632"><i class="fas fa-phone"  target="_blank" style="color: inherit;"></i> Call Us</a>
+    </div>
+    
+    <main>
+        <div id="catering-images">
+            <img src="charolas.jpg" alt="Charolas Image" class="catering-image">
+        </div>
+        <br><br>
+        <!-- Contact form widget -->
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-14344177-0129-40d6-b82c-de1adc04c4f3" data-elfsight-app-lazy></div>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/p/Querrepario-Mexican-Kitchen-100083320443617/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/querrepariomexicankitchen/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.yelp.com/biz/querrepario-mexican-kitchen-chicago" target="_blank"><i class="fab fa-yelp"></i></a>
+            <a href="https://www.tiktok.com/@querrepariomexkitchen" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <br>
+        <div class="squigly">
+            <img src="squigly.png" alt="Arte" />
+        </div>
+        <p>&copy; 2023 Querrepario Mexican Kitchen</p>
+
+        <!-- Sub-footer section -->
+        <div class="sub-footer">
+            <p>&copy; Copyright 2024 | Developed by 
+                <a href="https://SaasProductized.com" target="_blank" style="color: inherit;">SaaS Productized Co</a>. | All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Event listeners for Order Now dropdown
+        document.getElementById('order-now').addEventListener('click', function(event) {
+            let dropdowns = document.getElementsByClassName("order-dropdown");
+            for (let i = 0; i < dropdowns.length; i++) {
+                dropdowns[i].classList.toggle('show');
+            }
+            event.stopPropagation();
+        });
+
+        window.onclick = function(event) {
+            if (!event.target.matches('#order-now')) {
+                let dropdowns = document.getElementsByClassName("order-dropdown");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    let openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+</html>

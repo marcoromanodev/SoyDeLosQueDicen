@@ -1,0 +1,411 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header.sticky-header {
+    background-color: #800020; /* Burgundy color */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed; /* Ensure the header stays fixed on scroll */
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    border-bottom: none;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+header img#logo {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20pt;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #a52a2a;
+}
+
+.order-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.order-dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.order-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.show { 
+    display: block;
+}
+
+/* Fix the margin issue between header and nav */
+header.sticky-header {
+    padding-bottom: 0;
+}
+
+nav ul {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+header.sticky-header + nav {
+    margin-top: 0;
+}
+
+/* Add padding below the nav list to prevent the slider from getting cut off */
+main {
+    padding-top: 80px; /* More padding to give space between header/nav and content */
+    padding-bottom: 50px; /* Add bottom padding to separate content from footer */
+}
+
+/* Image slider styles */
+.slider {
+    position: relative;
+    max-width: 800px; /* Set a specific width */
+    height: 750px; /* Increased height to fit all content properly on desktop */
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    padding-top: 170px; /* Adjusted padding for the top of the slider */
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fill the slider */
+    margin-top: 20px; /* Ensure the image starts below the top */
+}
+
+/* TikTok Embed Styling */
+.tiktok-embed {
+    position: relative;
+    max-width: 800px; /* Set a specific width */
+    height: 750px; /* Match the height of the slider */
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    padding-top: 170px; /* Match the top padding of the slider */
+}
+
+.tiktok-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* No extra border around the iframe */
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% + 85px); /* Adjust the top to account for extra padding */
+    width: auto;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    z-index: 2; /* Keep arrows above content */
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: #800020;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 800px) {
+    header img#logo {
+        width: 200px;
+    }
+
+    .slider {
+        max-width: 100%;
+        height: auto; /* Allow the slider height to adjust dynamically */
+        padding-top: 110px; /* More padding for the top on mobile */
+    }
+
+    .slide img {
+        margin-top: 150px; /* Ensure image starts lower on mobile */
+        height: auto;
+    }
+
+    .tiktok-embed {
+        max-width: 100%;
+        height: auto; /* Dynamic height for mobile */
+        padding-top: 140px; /* More top padding for TikTok embeds */
+    }
+
+    .prev, .next {
+        font-size: 14px; /* Adjusted for mobile */
+        padding: 12px;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #800020; /* Burgundy color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+	
+}
+
+/* Sub-footer */
+.sub-footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 0.05rem 0 1rem 0; /* Adjusted padding */
+    width: 100%;
+    font-size: 0.8rem;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for separation */
+    box-sizing: border-box;
+    margin: 0; /* Remove any margin */
+}
+
+.social-icons {
+    background-color: #333; /* Gray color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px; /* Adjust the height as needed */
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 40px; /* Larger size for icons */
+}
+
+
+.social-icons a:hover {
+    color: #ddd; /* Lighter color on hover */
+}
+
+@media screen and (max-width: 800px) {
+    header img#logo {
+        width: 200px; /* Smaller logo for mobile */
+    }
+    .social-icons a {
+        font-size: 30px; /* Smaller icons for mobile */
+    }
+}
+
+/* Style for the Yelp Reviews Widget container */
+.reviews-widget {
+    margin-top: 20px; /* Adjust the margin as needed to position the widget */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f7f7f7; /* Background color for the widget */
+    border: 1px solid #ccc; /* Border for the widget */
+    border-radius: 5px; /* Rounded corners for the widget */
+    max-width: 800px; /* Set the maximum width */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center-align the widget */
+    max-height: none; /* Set the maximum height for displaying more reviews */
+    overflow-y: auto; /* Enable vertical scrolling for reviews */
+}
+
+/* Center the TikTok widget horizontally and vertically */
+.tiktok-widget {
+	position: center;
+    margin: auto;
+	display: block;
+	max-width: 800px; /* Set the maximum width */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center-align the widget */
+	
+}
+
+.tiktok-header {
+    text-align: center;
+	background-color: #333; /* Gray color */
+    color: white;
+    text-align: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+    margin: 0 auto; /* Center the box horizontally */
+}
+
+.tiktok-header h2 {
+    font-size: 24px;
+    margin-right: 20px;
+    display: inline;
+}
+
+.tiktok-header a img {
+    width: 60px; /* Adjust the size of the TikTok icon */
+    vertical-align: middle;
+}
+
+#about-us {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px; /* Adjust the max-width as needed */
+	size:24pt;
+	border: 1px solid #ccc; 
+    font-size: 19pt;
+    font-style: italic;
+	
+
+}
+
+.about-us-box {
+    background-color: #800020; /* Burgundy color */
+    color: white;
+    text-align: center;
+    padding: 5px 10px; /* Adjust padding as needed */
+    margin: 0 auto; /* Center the box horizontally */
+}
+
+.squigly {
+	position:center;
+
+}
+
+#about-us-images {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+}
+
+.about-us-image {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* For desktop and general screens */
+.catering-image {
+    margin: 0 auto; /* Center the box horizontally */
+    display: block;
+    max-width: 100%; /* Ensure the image scales with screen width */
+    height: auto; /* Maintain aspect ratio */
+    padding-top: 350px; /* Add padding to ensure image starts below header and nav */
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 800px) {
+    .catering-image {
+        max-width: 100%; /* Ensure the image scales with mobile screen width */
+        height: auto; /* Maintain aspect ratio */
+        padding-top: 250px; /* Add more top padding for mobile to ensure image doesn't get cut off */
+    }
+
+    /* TikTok Widget */
+    .tiktok-widget {
+        max-width: 100%;
+        max-height: none;
+    }
+
+    /* Reviews Widget */
+    .reviews-widget {
+        max-width: 100%;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    /* Slides */
+    .slider {
+        max-width: 100%;
+        max-height: auto;
+        height: auto;
+    }
+
+    /* About Us Images */
+    #about-us-images {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    #about-us-image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Mobile Contact Bar */
+.mobile-contact-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    z-index: 950; /* Ensure it is above other content */
+}
+
+/* Padding for body to prevent the mobile contact bar from covering content */
+body {
+    padding-bottom: 70px; /* Make sure there's space for the mobile contact bar */
+}
