@@ -9,6 +9,11 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div id="intro-animation">
+        <div class="loader">
+            <img src="delosquedicen.gif" alt="Intro animation">
+        </div>
+    </div>
     <header class="sticky-header"> <!-- Added sticky header class -->
         <div class="squigly">
             <img src="squigly.png" alt="Arte" />
@@ -59,13 +64,27 @@
 
         <!-- Sub-footer section -->
         <div class="sub-footer">
-            <p>&copy; Copyright 2024 | Developed by 
-                <a href="https://SaasProductized.com" target="_blank" style="color: inherit;">SaaS Productized Co</a>. | All Rights Reserved
+            <p>&copy; Copyright 2024 | Developed by
+                <a href="https://SaasProductized.com" target="_blank" style="color: white;">SaaS Productized Co</a>. | All Rights Reserved
             </p>
         </div>
     </footer>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const intro = document.getElementById('intro-animation');
+            if (intro) {
+                intro.style.display = 'flex';
+            }
+        });
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const intro = document.getElementById('intro-animation');
+                if (intro) {
+                    intro.style.display = 'none';
+                }
+            }, 1500);
+        });
         // Event listeners for Order Now dropdown
         document.getElementById('order-now').addEventListener('click', function(event) {
             let dropdowns = document.getElementsByClassName("order-dropdown");
