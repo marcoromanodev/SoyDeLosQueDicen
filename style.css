@@ -304,6 +304,10 @@ footer {
     margin: 0; /* Remove any margin */
 }
 
+.sub-footer a {
+    color: black;
+}
+
 .social-icons {
     background-color: #333; /* Gray color */
     display: flex;
@@ -475,6 +479,11 @@ footer {
     justify-content: space-around;
     padding: 12px 0;
     z-index: 950; /* Ensure it is above other content */
+}
+
+.mobile-contact-bar a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Padding for body to prevent the mobile contact bar from covering content */
