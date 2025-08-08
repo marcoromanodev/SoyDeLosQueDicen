@@ -387,12 +387,19 @@ footer {
     text-align: center;
     margin: 0 auto;
     max-width: 800px; /* Adjust the max-width as needed */
-	size:24pt;
-	border: 1px solid #ccc; 
+        size:24pt;
+        border: 1px solid #ccc;
     font-size: 19pt;
     font-style: italic;
-	
 
+
+}
+
+#about-us iframe {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
 }
 
 .about-us-box {
@@ -482,7 +489,14 @@ footer {
 }
 
 .mobile-contact-bar a {
-    color: white;
+    color: white !important;
+    text-decoration: none;
+}
+
+.mobile-contact-bar a:visited,
+.mobile-contact-bar a:hover,
+.mobile-contact-bar a:active {
+    color: white !important;
     text-decoration: none;
 }
 
