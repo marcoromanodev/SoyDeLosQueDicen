@@ -10,7 +10,9 @@
 </head>
 <body>
     <div id="intro-animation">
-        <img src="delosquedicen.gif" alt="Intro animation">
+        <div class="loader">
+            <img src="delosquedicen.gif" alt="Intro animation">
+        </div>
     </div>
     <header class="sticky-header">
 	<div class="squigly">
@@ -169,7 +171,7 @@
                 if (intro) {
                     intro.style.display = 'none';
                 }
-            }, 4000);
+            }, 1500);
         });
         let slideIndex = 1;
         showSlides(slideIndex);
