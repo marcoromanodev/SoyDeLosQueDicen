@@ -165,6 +165,12 @@
     </div>
 </footer>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const intro = document.getElementById('intro-animation');
+            if (intro) {
+                intro.style.display = 'flex';
+            }
+        });
         window.addEventListener('load', function() {
             setTimeout(function() {
                 const intro = document.getElementById('intro-animation');
