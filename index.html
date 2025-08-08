@@ -9,6 +9,9 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div id="intro-animation">
+        <img src="delosquedicen.gif" alt="Intro animation">
+    </div>
     <header class="sticky-header">
 	<div class="squigly">
     <img src="squigly.png" alt="Arte" />
@@ -160,6 +163,14 @@
     </div>
 </footer>
     <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const intro = document.getElementById('intro-animation');
+                if (intro) {
+                    intro.style.display = 'none';
+                }
+            }, 4000);
+        });
         let slideIndex = 1;
         showSlides(slideIndex);
 
