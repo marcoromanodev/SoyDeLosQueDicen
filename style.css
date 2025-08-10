@@ -65,6 +65,9 @@ header.sticky-header {
     border-bottom: none;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header img#logo {
@@ -78,7 +81,8 @@ header img#logo {
 .google-reviews {
     text-align: center;
     font-size: 0.8rem;
-    margin-top: -60px; /* Move stars closer to the logo */
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .google-reviews .review-link {
@@ -206,7 +210,7 @@ header.sticky-header + nav {
 
 .squigly img {
     display: block; /* Ensure the squigly images are block-level */
-    margin: 0 auto; /* Center the image */
+    margin: 5px auto; /* Center the image with spacing */
     padding: 0; /* Remove extra padding */
     width: auto; /* Ensure the image keeps its natural width */
     height: auto; /* Ensure the image keeps its natural height */
@@ -305,6 +309,12 @@ main {
 @media screen and (max-width: 800px) {
     header img#logo {
         width: 200px;
+    }
+
+    .google-reviews {
+        font-size: 0.7rem;
+        margin-top: 6px;
+        margin-bottom: 6px;
     }
 
     .slider {
